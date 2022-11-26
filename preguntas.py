@@ -109,7 +109,7 @@ def pregunta_03():
     )
 
     # Cargua de las variables.
-    X_train, _, y_train, _ = pregunta_02()
+    X_train, X_test, y_train, y_test = pregunta_02()
 
     # Defina un diccionario de parámetros para el GridSearchCV. Se deben
     # considerar valores desde 1 hasta 11 regresores para el modelo
@@ -165,7 +165,7 @@ def pregunta_04():
 
     mse_test = mean_squared_error(
         y_test_pred,
-        y_test_pred,
+        y_test,
     ).round(2)
 
     # Retorne el error cuadrático medio para entrenamiento y prueba
